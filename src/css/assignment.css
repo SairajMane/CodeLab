@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container .no {
+    font-size:18px;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.container .name-details .name {
+    font-size:18px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+.container .name-details .name .details {
+    font-size: 14px;
+}
+.subdate {
+    font-size:18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+.container:hover {
+    box-shadow: 0px 10px 30px rgba(192, 192, 192, 0.27);
+}
+.textparent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.submission-details {
+    text-align: right;
+}
+.done {
+    color: #30FF51;
+}
+.red {
+    color: #FA5858;
+}
+.warning {
+    color: #F6BC00;
+}

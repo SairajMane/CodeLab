@@ -1,0 +1,54 @@
+* {
+    border: 0px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+.nav {
+    height: 80px;
+    width: 100%;
+    padding: 20px 30px 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 20px #EDEDED;
+    position: sticky;
+}
+
+.nav-user-details {
+    height: max-content;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-user-details:hover {
+    background-color: #f1f1f145;
+    cursor: pointer;
+}
+
+.nav-user-details img {
+    margin-right: 10px;
+    height: 40px;
+}
+
+.nav-user-details {
+    font-family: SF Pro Display;
+    font-size: 14px;
+}
+
+.nav-user-details .user-text-details #username{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo img {
+    height: 45px;
+    cursor: pointer;
+}

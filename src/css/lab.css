@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: SF Pro Display;
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+*:focus {
+    outline: none !important;
+}
+.container {
+    height: 100px;
+    width: 600px;
+    border: 1px solid;
+    padding: 28px;
+    border-radius: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #F0F0F0;
+    margin: 10px 10px 10px 10px;
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+}
+
+.container:hover {
+    box-shadow: 0px 10px 30px rgba(192, 192, 192, 0.27);
+}
+
+.container .labname {
+    font-size:18px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.container .labdetails {
+    font-size: 14px;
+}
+
+.sentback {
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    padding: 5px 14px;
+    background-color: #FA5858;
+    border: solid 3px #FFBDBD;
+    border-radius: 30px;
+}
+
+.pending {
+    font-size: 12px;
+    font-weight: 400;
+    color: white;
+    padding: 5px 14px;
+    background-color: #F6BC00;
+    border: solid 3px #FFECB0;
+    border-radius: 30px;
+}
