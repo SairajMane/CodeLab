@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+h1{
+    position: relative;
+    left: 120px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    font-size: 23px;
+}
+.first{
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.ilogin{
+    padding-top: 30px;
+}
+
+.cover{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 340px;
+    height: 70%;
+    transform: translate(-50%, -50%);
+    border: 2px solid gainsboro;
+    border-radius: 5%;
+    padding-left: 0;
+}
+.top{
+    margin-top: 15px;
+}
+
+input{
+    border-radius: 0 2em;
+    padding: 0 10px;
+    width: 100%;
+    border: none;
+    line-height: 2em;
+    margin-bottom: 20px;
+    font-size: 10;
+}
+a{
+    position: absolute;
+    padding-top: 70px;
+    padding-left: 60px;
+}
+a:link {
+    text-decoration: none;
+}
+  
+a:visited {
+    text-decoration: none;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+a:active {
+    text-decoration: underline;
+}
+.foot{
+    position:relative;
+    padding-right: 50px;
+}
+.foot2{
+    position: absolute;
+    padding-left: 50px;
+    padding-bottom: 90px;
+}
+
+.alt_login div{
+    width: 55%;
+    height: 50%;
+    border-radius: 0.25em;
+    background-color: rgb(250, 199, 199);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+.p1{
+    position: relative;
+    left: 98px;
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.fp{
+    position: relative;
+    left: 63%;
+    padding-bottom: 20px;
+    font-size: 11px;
+}
+
+.ep1{
+    position: relative;
+    left: 30%;
+    padding-top: 20px;
+    padding-right: 20px;
+    font-size: smaller;
+    color: #535353;
+}
+
+.single-input{
+    width: 270px;
+    height: 40px;
+    background-color: #eeeded;
+    color: #c4c5c5;;
+    border-radius: 0.5em;
+    display: flex;
+    margin-bottom: 15px;
+    position: relative;
+    left: 10%;
+  }
+  input::placeholder {
+    font-size: 13px;
+    padding-left: 0px;
+    padding-top: 50px;
+  }
+  .single-input i{
+    padding: 8px 16px;
+    color: #c4c5c5;
+  }
+  .single-input input{
+    border:0px solid #c1c1c1;
+    background-color: #eeeded;
+    width: 100%;
+    outline: none;
+    height: 30px;
+    font-size: 18px;
+  }
+.ep2{
+    position: relative;
+    left: 45%;
+    font-size: smaller;
+    color: #535353;
+}
+
+input :focus{
+    outline: rgb(1, 5, 7);
+}
+
+.login_but{
+    width: 270px;
+    height: 50px;
+    background-color: rgb(59, 149, 223);
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    font-size: 15px;
+    align-items: center;
+    transition: 0.5s;
+    border-color: aliceblue;
+    border-radius: 0.75em;
+    cursor: pointer;
+    position: relative;
+    left: 10%;
+}
+
