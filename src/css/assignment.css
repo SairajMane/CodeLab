@@ -3,6 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.container {
+    background-color: white;
+}
 .container .no {
     font-size:18px;
     font-weight: bold;
@@ -32,6 +36,8 @@
 }
 .submission-details {
     text-align: right;
+    font-weight: bold;
+    font-size: 18px;
 }
 .done {
     color: #30FF51;
@@ -41,4 +47,9 @@
 }
 .warning {
     color: #F6BC00;
+}
+.assignment-labs-container {
+    height: 80vh;
+    overflow-y: scroll;
+    width: max-content;
 }

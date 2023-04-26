@@ -1,0 +1,34 @@
+import React, { Component } from "react";
+import "../css/assignment.css";
+import { getAssignments } from "../services/assignmentService";
+
+class Assignment extends Component {
+  state = {
+    assignment: getAssignments(),
+  };
+
+  render() {
+    let statusClasses = this.state.status === 1 ? "done" : "warning";
+    return (
+      <ul>
+        <li>
+          <div className="container">
+            <div className="name-details">
+              <p className="name">
+                {this.state.no}. {this.state.name}
+              </p>
+              <p className="details">{this.state.description}</p>
+            </div>
+            <div className="submission-details">
+              <p className={statusClasses}>
+                {this.state.status == 0 ? "Pending !" : "Submitted !"}{" "}
+              </p>
+            </div>
+          </div>
+        </li>
+      </ul>
+    );
+  }
+}
+
+export default Assignment;

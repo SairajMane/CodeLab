@@ -1,0 +1,27 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.vertical-content-divider {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.App {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-asgs-delete-later {
+    display: flex;
+    flex-direction: column;
+}
+
+.vertical-asgs-delete-later {
+    width: 0px;
+}
