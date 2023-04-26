@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: SF Pro Display;
-
     -webkit-tap-highlight-color: transparent;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -28,6 +27,7 @@
     margin: 10px 10px 10px 10px;
     cursor: pointer;
     transition: box-shadow 0.1s;
+    background-color: white;
 }
 
 .container:hover {
@@ -44,22 +44,19 @@
     font-size: 14px;
 }
 
-.sentback {
+.substat {
     font-size: 12px;
     font-weight: 400;
     color: white;
     padding: 5px 14px;
+    border-radius: 30px;
+}
+.sentback {
     background-color: #FA5858;
     border: solid 3px #FFBDBD;
-    border-radius: 30px;
 }
 
 .pending {
-    font-size: 12px;
-    font-weight: 400;
-    color: white;
-    padding: 5px 14px;
     background-color: #F6BC00;
-    border: solid 3px #FFECB0;
-    border-radius: 30px;
+    border: solid 3px #ffe89b;
 }
