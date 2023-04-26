@@ -1,0 +1,63 @@
+
+@import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+ 
+.sidebarmenu{
+    z-index: -1;
+    width: 18vw;
+    height: 100%;
+    position: absolute;
+    top : 0;
+    left : 0;
+    background-color: white;
+    box-shadow: 2px 0px 20px rgba(0, 0, 0, 0.09);
+    padding: 25px;
+    padding-top: 100px;
+}
+
+.sidebarmenuitem{
+    padding: 14px;
+    background-color: #F1F1F1;
+    margin: 14px 0px 14px 0px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'SF UI Display', sans-serif;
+    color: gray;
+    cursor: pointer;
+}
+
+.menu-name{
+    margin: 20px 0px 20px 0px;
+    font-family: 'SF UI Display', sans-serif;
+    color: gray;
+    font-size: 14px;
+}
+
+.opt-name{
+    color: black;
+    padding-left: 25px;
+    font-size: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.sidebarmenuitemactive{
+    padding: 14px;
+    margin: 14px 0px 14px 0px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    font-family: 'SF UI Display', sans-serif;
+    cursor: pointer;
+    color: white;
+    background-color: #2990EF;
+}
+
+.opt-name-active{
+    color: white;
+    padding-left: 25px;
+}
+
+.list{
+    list-style: none;
+}
