@@ -1,0 +1,6 @@
+Teacher : {
+    id : ,
+    name : ,
+    mail : ,
+    labs : [labid, labid,...............]
+}

@@ -1,0 +1,10 @@
+Assesment : {
+    labid : {
+        asgid [studid, studid,..............]
+    }
+
+    labid {
+        asgid [studid, studid,..............]
+    }
+    
+}
