@@ -1,0 +1,7 @@
+Labs : {
+    id : ,
+    code : ,
+    name : ,
+    assignments : [asgid, asgid,............]
+    owner : TeacherID
+}

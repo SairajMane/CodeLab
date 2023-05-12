@@ -1,0 +1,12 @@
+Assignment : {
+    id : ,
+    no : ,
+    asg_name : ,
+    problem_statement : ,
+    description : ,
+    language : ,
+    IO : {
+        input : ,
+        output : 
+    }
+}
