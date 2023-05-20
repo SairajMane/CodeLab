@@ -1,0 +1,64 @@
+@import url('https://fonts.cdnfonts.com/css/sf-ui-display');
+
+.createlab-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.createlab-container {
+  width: 360px;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-top: 40px;
+}
+
+.createlab-header {
+  padding-bottom: 30px;
+  font-family: 'SF UI Display', sans-serif;
+}
+
+.input-field {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: 'SF UI Display', sans-serif;
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+}
+
+.createlab-button {
+  display: block;
+  width: 100%;
+  padding: 16px;
+  background-color: #2990ef;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'SF UI Display', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.signup-link {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #036ffd;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}
