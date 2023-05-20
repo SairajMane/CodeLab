@@ -1,74 +1,71 @@
 import React from "react";
+import { MdVideoLabel } from "react-icons/md";
+import { MdAssignment } from "react-icons/md";
+import { MdOutlineDoneOutline } from "react-icons/md";
+import { MdOutlineMenuBook } from "react-icons/md";
+import { CgProfile } from "react-icons/cg";
+import { TbLogout } from "react-icons/tb";
+
 import { useState } from "react";
 import "../css/sidebar.css";
 import loginuser from "../img/login-user.svg";
 import logoutuser from "../img/login-lock.svg";
 
-// let menuitems = document.getElementsByClassName('sidebarmenuitem');
-// let prevActive = menuitems[0];
-// for(const item of menuitems){
-//     item.addEventListener('click', function setActive(event){});
-// }
-// function setActive(event) {
-//     event.target.classList.add("sidebarmenuitemactive");
-//     prevActive.classList.remove("sidebarmenuitemactive");
-//     prevActive = event.target;
-// }
-
 export default function Sidebar() {
-  //  const [appState, changeState] = useState({
-  //     activeObject: null,
-  //     objects: [{ id: 1 }],
-  //   });
-  //   function toggleActive(index) {
-  //     changeState({ ...appState, activeObject: appState.objects[index] });
-  //   }
-    
-  //   function toggleActiveStyles(index) {
-  //     if (appState.objects[index] === appState.activeObject) {
-  //       return "sidebarmenuitem sidebarmenuitemactive";
-  //     } else {
-  //       return "sidebarmenuitem";
-  //     }
+  const [active, setActive] = useState('LABS');
+  const setActiveClick = (id) => () => setActive(id);
+
   return (
     <div className="sidebarmenu">
       <p className="menu-name">MENU</p>
-      <div className="sidebarmeunitem">
-         <img src={loginuser} alt="Pict-CodeLab" className="img" />
-         <p className="opt-name">LABS</p>
+      <div
+        className={`sidebarmenuitem${active === 'LABS' ? 'sidebarmenuitem sidebarmenuitemactive' : ''}`}
+        onClick={setActiveClick('LABS')}
+      >
+         <MdVideoLabel size={22}/>
+         <p className={`opt-name${active === 'LABS' ? 'opt-name opt-name-active' : ''}`}
+        onClick={setActiveClick('LABS')}>LABS</p>
        </div>
-      <div className="sidebarmenuitem">
-        <img src={loginuser} alt="Pict-CodeLab" className="img" />
-        <p className="opt-name">Assignments</p>
+      <div
+        className={`sidebarmenuitem${active === 'Assignments' ? ' sidebarmenuitemactive' : ''}`}
+        onClick={setActiveClick('Assignments')}
+      >
+        <MdAssignment size={22}/>
+        <p className={`opt-name${active === 'Assignments' ? 'opt-name opt-name-active' : ''}`}
+        onClick={setActiveClick('Assignments')}>Assignments</p>
       </div>
       <div
-        className="sidebarmenuitem"
-        onClick={(e) => e.target.classList.toggle("sidebarmenuitemactive")}
+        className={`sidebarmenuitem${active === 'Submitted Codes' ? ' sidebarmenuitemactive' : ''}`}
+        onClick={setActiveClick('Submitted Codes')}
       >
-        <img src={loginuser} alt="Pict-CodeLab" className="img" />
-        <p className="opt-name">Submitted Codes</p>
+        <MdOutlineDoneOutline size={22}/>
+        <p className={`opt-name${active === 'Submitted Codes' ? 'opt-name opt-name-active' : ''}`}
+        onClick={setActiveClick('Submitted Codes')}>Submitted Codes</p>
       </div>
       <div
-        className="sidebarmenuitem"
-        onClick={(e) => e.target.classList.toggle("sidebarmenuitemactive")}
+        className={`sidebarmenuitem${active === 'Study Material' ? ' sidebarmenuitemactive' : ''}`}
+        onClick={setActiveClick('Study Material')}
       >
-        <img src={loginuser} alt="Pict-CodeLab" className="img" />
-        <p className="opt-name">Study Material</p>
+        <MdOutlineMenuBook size={22}/>
+        <p className={`opt-name${active === 'Study Material' ? 'opt-name opt-name-active' : ''}`}
+        onClick={setActiveClick('Study Material')}>Study Material</p>
       </div>
       <p className="menu-name">ACCOUNT</p>
       <div
-        className="sidebarmenuitem"
-        onClick={(e) => e.target.classList.toggle("sidebarmenuitemactive")}
+        className={`sidebarmenuitem${active === 'Profile' ? ' sidebarmenuitemactive' : ''}`}
+        onClick={setActiveClick('Profile')}
       >
-        <img src={loginuser} alt="Pict-CodeLab" className="img" />
-        <p className="opt-name">Profile</p>
+        <CgProfile size={22}/>
+        <p className={`opt-name${active === 'Profile' ? 'opt-name opt-name-active' : ''}`}
+        onClick={setActiveClick('Profile')}>Profile</p>
       </div>
       <div
-        className="sidebarmenuitem"
-        onClick={(e) => e.target.classList.toggle("sidebarmenuitemactive")}
+        className={`sidebarmenuitem${active === 'Log Out' ? ' sidebarmenuitemactive' : ''}`}
+        onClick={setActiveClick('Log Out')}
       >
-        <img src={logoutuser} alt="Pict-CodeLab" className="img" />
-        <p className="opt-name">Log Out</p>
+        <TbLogout size={22}/>
+        <p className={`opt-name${active === 'Log Out' ? 'opt-name opt-name-active' : ''}`}
+        onClick={setActiveClick('Log Out')}>Log Out</p>
       </div>
     </div>
   );
