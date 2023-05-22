@@ -1,0 +1,87 @@
+Student ---
+        ---> Login { (Sairaj)
+            login fields & SignUp 
+        }
+
+        ---> Sign up { (Sairaj)
+            As Student or As Teacher (Modal)
+        }
+
+        ---> Student Dashboard (Sairaj)
+
+        ---> Labs (Sairaj)
+            ---Join Lab Form (Modal) ---> Render Joined Labs
+
+        ---> Labs (Siddhant - Assignment submission Page)
+                ---> Assignment
+                    --- Run Code
+                    --- Submit Assignment
+                    --- View Assignment
+                    --- See Marks
+                    --- Assignment Details (Problem statement, description, I/O formats)
+
+Teacher ---
+        ---> Login { (Sairaj)
+            login fields & SignUp 
+        }
+
+        ---> SignUp { (Sairaj)
+            As Student or As Teacher (Modal)
+        }
+
+        ---> Teacher Dashboard (Sairaj)
+        
+        ---> Labs
+            --- Render Created Labs if any
+            --- Create Lab (Option - Sairaj) (Form - Siddhant)
+                    --- Lab id
+                    --- Lab name
+                    --- Lab description
+                    --- Owner (by default)
+        
+        ---> Labs
+                ---> Create Assignment (Siddhant - Form)
+                                    --- id
+                                    --- name
+                                    --- problem_statement
+                                    --- description
+                                    --- language
+                                    --- I/O
+            
+                ---> Assess Assignment (Siddhant - Form)
+                                    --- problem_statement
+                                    --- code
+                                    --- description
+                                    --- I/O format
+                                    --- Output
+                                    --- Accept Marks
+                
+                ---> Assignment status table 
+                                    --- Student ROll, name
+                                    --- submission status
+
+
+
+Dev --->
+        --- assignmentDahsboard (Component names)
+        --- Class Component - state, props, constructor
+
+
+        //Inheritance
+        Class DashComponent extends React.Component {
+            state = {
+                name : "" 
+            }
+
+            styles = {
+
+            }
+
+            render() {
+                return(<div></div>);
+            }
+        }
+
+        export default function Button() {
+            return <div/>;
+        }

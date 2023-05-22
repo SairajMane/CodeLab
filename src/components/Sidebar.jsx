@@ -19,7 +19,7 @@ export default function Sidebar() {
     <div className="sidebarmenu">
       <p className="menu-name">MENU</p>
       <div
-        className={`sidebarmenuitem${active === 'LABS' ? 'sidebarmenuitem sidebarmenuitemactive' : ''}`}
+        className={`sidebarmenuitem${active === 'Labs' ? 'sidebarmenuitem sidebarmenuitemactive' : ''}`}
         onClick={setActiveClick('LABS')}
       >
          <MdVideoLabel size={22}/>
