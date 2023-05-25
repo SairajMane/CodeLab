@@ -1,6 +1,6 @@
 @import url('https://fonts.cdnfonts.com/css/sf-ui-display');
 
-.problemArea {
+.problemArea-1 {
   height: 100%;
   width: 50%;
   position: absolute;
@@ -8,16 +8,30 @@
   top: 0;
   left: 0;
   overflow-x: hidden;
-  padding-top: 60px;
-
+  padding-top: 100px;
 }
 
-.heading {
+.crumb{
+  font-family: 'SF UI Display', sans-serif;
+  font-size: 22px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+  margin-left: 50px;
+}
+
+.marks
+{
+  font-weight: normal;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.heading-1 {
     font-family: 'SF UI Display', sans-serif;
     font-size: 24px;
     display: flex;
     margin-left: 50px;
-    margin-top: 100px;
+    margin-top: 10px;
     font-weight: bold;
 }
 
@@ -52,7 +66,7 @@
     font-size: 20px;
 }
 
-.editor{
+.editor-section{
   height: 100%;
   width: 50%;
   position: fixed;
@@ -60,67 +74,162 @@
   top: 0;
   right: 0;
   overflow-x: hidden;
-  padding-top: 85px;
+  padding-top: 100px;
   padding-right: 10px;
 }
 
-.langselect{
-    padding-bottom: 10px;
-    padding-left: 590px;
-}
-
-.input-box{
-    flex: 50%;
-  }
-.input-box textarea{
-    font-size: 16px;
-  }
-
-  .run-btn{
-    position: absolute;
-    bottom: 10px;
-    right: 18px;
-    width: 80px;
-    height: 40px;
-    font-size: 22px;
-    font-weight: bold;
-    background-color: #639cd1;
-    border: none;
-    border-radius: 4px;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .run-btn:active{
-    background-color: #2990EF;
-  }
-
-
-  .output-box{
-    flex: 50%;
-    background-color: #242424;
-    overflow-y: auto;
-    color: white;
-    position: relative;
-  }
-  .clear-btn{
-    position: absolute;
-    bottom: 14px;
-    right: 18px;
-    width: 80px;
-    height: 40px;
-    font-size: 22px;
-    font-weight: bold;
-    color: white;
-    background-color: #1f65e6;
-    border: none;
-    border-radius: 4px;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .output-box pre{
-    font-size: 15px;
-    white-space: pre-wrap;
-  }
   h4{
     color: #afec3f;
+  }
+
+  .editor{
+    height: 50px;
+    width: 500px;
+    position: absolute;
+  }
+
+  .dropdown{
+    margin-left: 300px;
+    margin-bottom: 0px;
+  }
+
+  .editor{
+    width: 780px;
+  }
+
+  .button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 510px;
+  }
+  
+  .scrollip{
+    margin-left: -220px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    font-family: 'SF UI Display', sans-serif;
+  }
+
+  .buttons {
+    padding: 13px 16px;
+    margin-top: -15px;
+    font-size: 16px;
+    font-family: 'SF UI Display', sans-serif;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .button-1 {
+    background-color: lightgray;
+    color: black;
+  }
+  
+  .button-2 {
+    background-color: #2990ef;
+  }
+  
+  .button-1:hover {
+    background-color: gray;
+  }
+  
+  .button-2:focus {
+    outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.4);
+  }
+
+  .button-2:hover {
+    background-color: #0056b3;
+  }
+  
+  .button-1:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 1, 0, 0.4);
+  }
+  
+  .buttons + .buttons {
+    margin-left: 12px; /* Adjust the margin as needed */
+  }
+
+
+
+
+  /* io div*/
+
+  .input-output-container {
+    width: 650px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .input-output-header {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .input-textarea,
+  .output-textarea {
+    width: 100%;
+    height: 120px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-textarea {
+    background-color: #f7f7f7;
+    resize: none;
+  }
+  
+  .output-textarea {
+    background-color: #fff;
+    color: #333;
+    resize: none;
+  }
+
+  .iodiv{
+    margin-bottom: 10px;
+  }
+
+  .input-output-container-1 {
+    width: 710px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+  }
+  
+  .input-output-header-1 {
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .input-textarea-1,
+  .output-textarea-1 {
+    width: 100%;
+    height: 120px;
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .input-textarea-1 {
+    background-color: #f7f7f7;
+    resize: none;
+  }
+  
+  .output-textarea-1 {
+    background-color: #fff;
+    color: #333;
+    resize: none;
   }

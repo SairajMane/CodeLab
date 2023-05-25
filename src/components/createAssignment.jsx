@@ -1,17 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/createAssignment.css';
 
-const CreateLab = () => {
-  const [number, setNumber] = useState('');
+const CreateAssignment = () => {
+  const [no, setNo] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
   const [Statement, setStatement] = useState('');
   const [language, setLanguage] = useState('');
   const [input, setInput] = useState('');
-  const[output, setOutput] = useState('');
+  const [output, setOutput] = useState('');
+  const [selectedLanguage, setSelectedLanguage] = useState('');
+  const [languageOptions, setLanguageOptions] = useState([]);
+
+
+  useEffect(() => {
+    const manualLanguageOptions = [
+      { value: 'javascript', label: 'JavaScript' },
+      { value: 'python3', label: 'Python' },
+      { value: 'java', label: 'Java' },
+      { value: 'cpp', label: 'C++' },
+      { value: 'ruby', label: 'Ruby' },
+      { value: 'go', label: 'Go' },
+      { value: 'php', label: 'PHP' },
+      { value: 'swift', label: 'Swift' },
+      { value: 'csharp', label: 'C#' },
+      { value: 'typescript', label: 'TypeScript' },
+      { value: 'rust', label: 'Rust' },
+      { value: 'kotlin', label: 'Kotlin' },
+      { value: 'scala', label: 'Scala' },
+      { value: 'perl', label: 'Perl' },
+      { value: 'haskell', label: 'Haskell' },
+    ];
+
+    setLanguageOptions(manualLanguageOptions);
+  }, []);
+
 
   const handleNumberChange = (e) => {
-    setNumber(e.target.value);
+    setNo(e.target.value);
   };
 
   const handleNameChange = (e) => {
@@ -26,8 +52,9 @@ const CreateLab = () => {
     setDescription(e.target.value);
   };
 
-  const handleLanguageChange = (e) => {
-    setLanguage(e.target.value);
+  const handleLanguageChange = (selectedOption) => {
+    setSelectedLanguage(selectedOption);
+    setLanguage(selectedOption.value);
   };
 
   const handleInputChange = (e) => {
@@ -40,8 +67,8 @@ const CreateLab = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(number,name,Statement,description,language,input,output);
-      fetch("http://192.168.1.108:4000/api/v1/assignment-creation", {
+    console.log(no,name,Statement,description,language,input,output);
+      fetch("http://192.168.249.31:4000/api/v1/assignment-creation", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -50,7 +77,7 @@ const CreateLab = () => {
           "Access-Control-Allow-Origin": "*",
         },
         body: JSON.stringify({
-          number,
+          no,
           name,
           Statement,
           description,
@@ -62,7 +89,7 @@ const CreateLab = () => {
         .then((res) => res.json())
         .then((data) => {
           console.log(data, "AssignmentCreated");
-          if (data.status == "ok") {
+          if (data.status === "ok") {
             alert("Assignment Created Successfully");
             
           } else {
@@ -80,7 +107,7 @@ const CreateLab = () => {
           <input
             type="number"
             placeholder="Assignment Number"
-            value={number}
+            value={no}
             onChange={handleNumberChange}
             className="input-field"
             required
@@ -111,14 +138,23 @@ const CreateLab = () => {
               required
             ></textarea>
           </div>
-          <input
-            type="text"
-            placeholder="Language"
-            value={language}
-            onChange={handleLanguageChange}
-            className="input-field"
-            required
-          />
+          <div className="form-group">
+            
+            <select
+              id="language"
+              value={selectedLanguage}
+              onChange={(e) => handleLanguageChange(e.target.value)}
+              className="input-field"
+              required
+            >
+              <option value="">Select a language</option>
+              {languageOptions.map((option) => (
+                <option key={option.value} value={option.value}>
+                  {option.label}
+                </option>
+              ))}
+            </select>
+          </div>
           <input
             type="text"
             placeholder="Input Format"
@@ -142,4 +178,4 @@ const CreateLab = () => {
   );
 };
 
-export default CreateLab;
+export default CreateAssignment;
