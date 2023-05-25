@@ -23,7 +23,7 @@ const CreateLab = () => {
     e.preventDefault();
 
     console.log(lname, ldesc,lclass);
-    fetch("http://192.168.1.112:4000/api/v1/lab-creation", {
+    fetch("http://192.168.1.102:4000/api/v1/lab-creation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

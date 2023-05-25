@@ -13,5 +13,5 @@ class ComponentPlayGround extends Component {
         );
     }
 }
- 
+
 export default ComponentPlayGround;
