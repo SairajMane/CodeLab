@@ -15,7 +15,7 @@ const CreateLab = () => {
     setlDesc(e.target.value);
   };
 
-  const handleOwnerChange = (e) => {
+  const handleClassChange = (e) => {
     setlClass(e.target.value);
   };
 
@@ -23,7 +23,7 @@ const CreateLab = () => {
     e.preventDefault();
 
     console.log(lname, ldesc,lclass);
-    fetch("http://192.168.0.108:4000/api/v1/lab-creation", {
+    fetch("http://192.168.1.112:4000/api/v1/lab-creation", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -75,9 +75,9 @@ const CreateLab = () => {
           />
           <input
             type="text"
-            placeholder="Lab Owner"
+            placeholder="Enter Class"
             value={lclass}
-            onChange={handleOwnerChange}
+            onChange={handleClassChange}
             className="input-field"
             required
           />

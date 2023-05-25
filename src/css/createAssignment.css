@@ -7,7 +7,7 @@
     height: 100vh;
     background: white;
     border-radius: 0px;
-    margin-top: 70px;
+    margin-top: 50px;
   }
   
   .assigncreate-container {
@@ -22,6 +22,7 @@
 
   .assignheading{
     padding-bottom: 20px;
+    color: rgb(27, 8, 8);
   }
   
   .input-field {
@@ -65,6 +66,7 @@
   
   .form-group {
     margin-bottom: 20px;
+    font-family: 'SF UI Display', sans-serif
   }
 
   .form-control {
@@ -72,4 +74,5 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
+    font-family: 'SF UI Display', sans-serif
   }
