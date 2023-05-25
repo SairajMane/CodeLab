@@ -26,14 +26,18 @@ function App() {
     marks: "10"
   }
 
+  const passlabid = {
+    labId : "646e861dbbd0a8540ae38547"
+  }
+
   return (
     <div className="App">
       <Navbar />
       {/* <UpdatedG assignment={assignment} />  */}
       {/* <UpdatedPS assignment = {assignment}/> */}
       {/* <ProblemStatement assignment = {assignment}/> */}
-      <GradingPage assignment={assignment}/>
-      {/* <AssignmentCreate /> */}
+      {/* <GradingPage assignment={assignment}/> */}
+      <AssignmentCreate passlabid = {passlabid} />
       {/* <LabCreate /> */}
       {/* <AssignmentCreate /> */}
       {/* <Test /> */}

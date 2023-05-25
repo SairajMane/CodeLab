@@ -1,0 +1,18 @@
+Student : {
+    id : , (F)
+    roll_no : , (F)
+    name : ,(F)
+    class : ,(F)
+    mail : ,(F)
+    labs : {
+        labid : { [
+                asigid : {
+                    status : 0 / 1,
+                    graded : 0 / 1,
+                    marks : ,
+                    submissionId : refers to Codebase submission id....
+                }
+            ]
+        }
+    }
+}

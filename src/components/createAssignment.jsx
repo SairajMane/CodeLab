@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/createAssignment.css';
 
-const CreateAssignment = () => {
+const CreateAssignment = (props) => {
   const [no, setNo] = useState('');
   const [name, setName] = useState('');
   const [description, setDescription] = useState('');
@@ -68,7 +68,7 @@ const CreateAssignment = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(no,name,Statement,description,language,input,output);
-      fetch("http://192.168.249.31:4000/api/v1/assignment-creation", {
+      fetch("http://192.168.1.102:4000/api/v1/assignment-creation", {
         method: "POST",
         crossDomain: true,
         headers: {
@@ -83,7 +83,8 @@ const CreateAssignment = () => {
           description,
           language,
           input,
-          output
+          output,
+          labId: props.passlabid.labId
         }),
       })
         .then((res) => res.json())
